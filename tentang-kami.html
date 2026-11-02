@@ -140,6 +140,28 @@
   .struktur-lead h4{font-size:15.5px;color:var(--emerald-950);margin:0 0 3px;font-family:var(--font-body);font-weight:700;}
   .struktur-lead span{font-size:12.5px;color:var(--gold-600);font-weight:700;text-transform:uppercase;letter-spacing:.03em;}
   .struktur-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .struktur-grid{grid-template-columns:repeat(5,1fr);gap:14px;}
+  @media (max-width:980px){.struktur .struktur-grid{grid-template-columns:repeat(2,1fr);gap:12px;}.struktur .s-card{padding:16px 10px;}.struktur .s-card h5{font-size:13.5px;}}
+  .vm-panel{display:flex;flex-direction:column;justify-content:center;}
+  .vm-panel p{font-size:19px;line-height:1.75;color:#fff;}
+  .penasehat,.bidang-box{margin-top:26px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 26px;}
+  .penasehat h4,.bidang-box h4{font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-600);margin:0 0 12px;}
+  .chip-row{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip-row span{background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--emerald-950);}
+  .chip-bidang span{background:var(--emerald-100);border-color:transparent;}
+  .b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .b-card{background:var(--cream);border:1px solid var(--line);border-left:4px solid var(--gold-500);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:4px;}
+  .b-card .b-name{font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-600);line-height:1.4;min-height:32px;}
+  .b-card strong{font-size:15px;color:var(--emerald-950);}
+  .b-card em{font-style:normal;font-size:12px;color:var(--ink-soft);}
+  @media (max-width:980px){.b-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.b-grid{grid-template-columns:1fr;}.b-card .b-name{min-height:0;}}
+  .tujuan-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);padding:34px;}
+  .tujuan-card h3{font-size:21px;margin-bottom:18px;}
+  .tujuan-list{margin:0;padding:0;list-style:none;counter-reset:t;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;}
+  .tujuan-list li{counter-increment:t;position:relative;padding-left:44px;font-size:14px;line-height:1.7;color:var(--ink-soft);}
+  .tujuan-list li::before{content:counter(t);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--emerald-900);color:var(--gold-300);font-family:var(--font-display);font-size:15px;display:flex;align-items:center;justify-content:center;}
+  @media (max-width:760px){.tujuan-list{grid-template-columns:1fr;}.tujuan-card{padding:24px;}}
   .s-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-md);padding:22px;text-align:center;}
   .s-card .avatar{width:48px;height:48px;border-radius:50%;background:var(--cream);color:var(--emerald-700);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:17px;margin:0 auto 14px;}
   .s-card h5{font-size:14px;color:var(--emerald-950);margin:0 0 4px;}
@@ -354,15 +376,26 @@
     <div class="vm-two">
       <div class="vm-panel reveal">
         <h3>Visi</h3>
-        <p>Menjadi rumah ibadah yang menumbuhkan iman, ilmu, dan kepedulian sosial bagi seluruh warga sekitar, serta menjadi ruang belajar dan berbagi yang terbuka bagi setiap generasi.</p>
+        <p>Menjadikan Masjid Al-Mujahidin Kukusan sebagai pusat kegiatan ibadah, tarbiyah, muamalah, serta pemberdayaan untuk meningkatkan kesejahteraan umat.</p>
       </div>
       <div class="misi-list reveal">
         <h3>Misi</h3>
-        <div class="misi-row"><span class="misi-num">01</span><p>Menyelenggarakan ibadah harian dan Jumat yang tertib, nyaman, dan konsisten bagi seluruh jamaah.</p></div>
-        <div class="misi-row"><span class="misi-num">02</span><p>Menghadirkan kajian dan pendidikan Al-Qur'an yang terbuka untuk anak-anak hingga lansia.</p></div>
-        <div class="misi-row"><span class="misi-num">03</span><p>Mengelola dana infak dan sosial secara transparan serta melaporkannya secara berkala kepada jamaah.</p></div>
-        <div class="misi-row"><span class="misi-num">04</span><p>Menjalin ukhuwah dengan warga sekitar melalui program sosial dan kegiatan lintas usia.</p></div>
+        <div class="misi-row"><span class="misi-num">01</span><p>Menjadikan masjid sebagai pusat dakwah dan ibadah kepada Allah Subhanahu wata'ala.</p></div>
+        <div class="misi-row"><span class="misi-num">02</span><p>Menjadikan masjid sebagai tempat majelis ilmu, pengkaderan, dan regenerasi.</p></div>
+        <div class="misi-row"><span class="misi-num">03</span><p>Menjadikan masjid sebagai wadah pemersatu umat, tempat terjalinnya ukhuwah Islamiyah dan keikhlasan dalam beribadah.</p></div>
+        <div class="misi-row"><span class="misi-num">04</span><p>Menjadikan masjid sebagai tempat pembekalan dan pemberdayaan ekonomi umat dalam upaya memakmurkan masjid.</p></div>
+        <div class="misi-row"><span class="misi-num">05</span><p>Menjadikan masjid sebagai wadah umat Muslim untuk beramal, berinfak, dan bersedekah demi membangun masyarakat yang sejahtera dan mendapat ridho Allah Subhanahu wata'ala.</p></div>
       </div>
+    </div>
+    <div class="tujuan-card reveal">
+      <h3>Tujuan dan Sasaran</h3>
+      <ol class="tujuan-list">
+        <li>Meningkatnya kemampuan dan kemauan untuk beribadah berjamaah, mengikuti majelis ilmu, beramal, berinfak, dan bersedekah.</li>
+        <li>Meningkatnya kemampuan pengurus DKM dalam mengelola masjid dengan lebih baik.</li>
+        <li>Tersedianya sarana dan pendanaan untuk pengelolaan kegiatan masjid.</li>
+        <li>Terciptanya jalinan komunikasi antara jamaah masjid dan masyarakat sekitar.</li>
+        <li>Meningkatnya peran serta jamaah dan masyarakat lingkungan masjid dalam memakmurkan masjid.</li>
+      </ol>
     </div>
   </div>
 </section>
@@ -372,24 +405,39 @@
     <div class="reveal" style="margin-bottom:36px;">
       <div class="eyebrow">Kepengurusan</div>
       <h2 class="section-title">Struktur Dewan Kemakmuran Masjid</h2>
-      <p class="section-lede">Masjid dikelola oleh pengurus DKM periode 2024–2027 bersama relawan muda yang aktif dalam berbagai bidang.</p>
+      <p class="section-lede">Pengurus DKM Masjid Al-Mujahidin Kukusan periode 2021&ndash;2025, dengan sembilan bidang kegiatan yang masing-masing dipimpin seorang ketua bidang.</p>
     </div>
     <div class="struktur-lead reveal">
-      <div class="avatar">HR</div>
+      <div class="avatar">RE</div>
       <div>
-        <h4>Ustadz Harun Al-Rasyid</h4>
+        <h4>H. Rustam Efendie, M.Pd</h4>
         <span>Ketua DKM</span>
       </div>
     </div>
     <div class="struktur-grid reveal">
-      <div class="s-card"><div class="avatar">KA</div><h5>Khalid Amrullah</h5><span>Wakil Ketua</span></div>
-      <div class="s-card"><div class="avatar">YH</div><h5>Yusuf Hakim</h5><span>Sekretaris</span></div>
-      <div class="s-card"><div class="avatar">IF</div><h5>Ibrahim Fauzan</h5><span>Bendahara</span></div>
-      <div class="s-card"><div class="avatar">AF</div><h5>Ahmad Fadli</h5><span>Bidang Dakwah</span></div>
-      <div class="s-card"><div class="avatar">RS</div><h5>Ridwan Saputra</h5><span>Bidang Sosial</span></div>
-      <div class="s-card"><div class="avatar">MN</div><h5>Muhammad Nur</h5><span>Bidang Pembangunan</span></div>
-      <div class="s-card"><div class="avatar">SA</div><h5>Siti Aminah</h5><span>Koordinator Muslimah</span></div>
-      <div class="s-card"><div class="avatar">DP</div><h5>Dedi Pratama</h5><span>Koordinator Remaja</span></div>
+      <div class="s-card"><div class="avatar">ZB</div><h5>Zaenal Bastari, SE</h5><span>Wakil Ketua</span></div>
+      <div class="s-card"><div class="avatar">AM</div><h5>Abdul Mutholib Yusuf</h5><span>Sekretaris</span></div>
+      <div class="s-card"><div class="avatar">MF</div><h5>Muhammad Fauzi, SE</h5><span>Wakil Sekretaris</span></div>
+      <div class="s-card"><div class="avatar">BM</div><h5>Berlin Mulyadi</h5><span>Bendahara</span></div>
+      <div class="s-card"><div class="avatar">MW</div><h5>Muzakir Walad, S.Pd</h5><span>Wakil Bendahara</span></div>
+    </div>
+    <div class="penasehat reveal">
+      <h4>Penasehat</h4>
+      <div class="chip-row"><span>Pimpinan Ranting Muhammadiyah Kukusan</span><span>Pimpinan Ranting Aisyiyah Kukusan</span><span>Imam Utama Masjid Al-Mujahidin Kukusan</span><span>Dr. Ir. H. Muchdie, M.Sc</span><span>H. Sanusi HK, S.Pd, M.Si</span></div>
+    </div>
+    <div class="bidang-box reveal">
+      <h4>Ketua bidang DKM</h4>
+      <div class="b-grid">
+        <div class="b-card"><span class="b-name">Dakwah dan Ibadah</span><strong>Ihtianto HK, M.Pd</strong><em>Ketua Bidang</em></div>
+        <div class="b-card"><span class="b-name">Pendidikan dan Pengembangan SDM</span><strong>Suryadi, S.Pd</strong><em>Ketua Bidang</em></div>
+        <div class="b-card"><span class="b-name">Pembangunan, Pemeliharaan, Peralatan dan Perlengkapan</span><strong>Ir. Budi Utomo</strong><em>Ketua Bidang</em></div>
+        <div class="b-card"><span class="b-name">Sosial dan Kemasyarakatan</span><strong>Ruslan, SH</strong><em>Ketua Bidang</em></div>
+        <div class="b-card"><span class="b-name">Keamanan dan Ketertiban</span><strong>Zulfasha</strong><em>Ketua Bidang</em></div>
+        <div class="b-card"><span class="b-name">Ekonomi dan Kesejahteraan</span><strong>Fahrial Zulfikar, S.Pd</strong><em>Ketua Bidang</em></div>
+        <div class="b-card"><span class="b-name">Pemberdayaan Wanita Muslimah</span><strong>Dwi Sandrayanti, M.Pd</strong><em>Ketua Bidang</em></div>
+        <div class="b-card"><span class="b-name">Publikasi, Informasi dan Hubungan Masyarakat</span><strong>Dr. Asep Suryana</strong><em>Ketua Bidang</em></div>
+        <div class="b-card"><span class="b-name">Perpustakaan dan Dokumentasi</span><strong>H. Zaini Ismal</strong><em>Ketua Bidang</em></div>
+      </div>
     </div>
   </div>
 </section>
