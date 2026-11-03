@@ -431,6 +431,8 @@
   .galeri{padding:100px 0 90px;}
   .galeri-head{display:block;margin-bottom:44px;}
   .galeri-head .section-lede{margin-top:14px !important;}
+  .event-lede{max-width:none;}
+  @media (min-width:1100px){.event-lede{white-space:nowrap;font-size:min(16px,calc((50vw + 538px)/86));}}
   .g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .g-card{
     border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--line);
@@ -957,7 +959,7 @@
     <div class="reveal" style="margin-bottom:44px;">
       <div class="eyebrow">Agenda Mendatang</div>
       <h2 class="section-title">Event dan Agenda Terdekat</h2>
-      <p class="section-lede">Catat tanggalnya — beda dengan kajian rutin, agenda ini bersifat khusus dan hanya berlangsung sekali.</p>
+      <p class="section-lede event-lede">Mari kita hadiri setiap Agenda Kegiatan &ldquo;Majelis Ilmu&rdquo; yang diadakan di Masjid Al Mujahidin Kukusan. Ajak semua anggota keluarga kita, dan semua acara ini Gratis dan Terbuka untuk Umum.</p>
     </div>
     <div class="event-grid" id="eventGrid" data-max-show="4">
       <div class="event-card reveal" data-date="2026-11-01">
