@@ -237,8 +237,11 @@
 
   /* ===== PROFIL ===== */
   .profil{padding:120px 0 90px;}
-  .profil-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center;}
-  .profil-media{position:relative;align-self:stretch;min-height:540px;}
+  .profil-grid{display:grid;grid-template-columns:.95fr 1.05fr;column-gap:64px;row-gap:0;align-items:center;}
+  .profil-media{position:relative;align-self:stretch;min-height:540px;grid-column:1;grid-row:1 / span 2;}
+  .profil-top{grid-column:2;grid-row:1;align-self:end;}
+  .profil-bottom{grid-column:2;grid-row:2;align-self:start;}
+  .profil-bottom .vm-grid{margin-top:14px;}
   .profil-media::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--gold-300);border-radius:var(--radius-lg);z-index:0;}
   .profil-illus{position:relative;z-index:1;height:100%;min-height:540px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft);}
   .profil-illus img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:46% 50%;display:block;filter:none !important;}
@@ -263,7 +266,8 @@
   .btn-green:hover{background:var(--gold-500);border-color:var(--gold-500);color:var(--emerald-950);transform:translateY(-2px);}
   .btn-green svg{width:18px;height:18px;transition:transform .2s ease;}
   .btn-green:hover svg{transform:translateX(4px);}
-  @media (max-width:980px){.profil-media{align-self:auto;min-height:0;}.profil-illus{height:auto;min-height:0;aspect-ratio:4/3;}.profil-media::before{inset:14px -14px -14px 14px;}}
+  @media (max-width:980px){.profil-grid{row-gap:28px;}.profil-top{grid-column:1;grid-row:auto;order:1;align-self:auto;}.profil-media{grid-column:1;grid-row:auto;order:2;}.profil-bottom{grid-column:1;grid-row:auto;order:3;align-self:auto;}.profil-bottom .vm-grid{margin-top:0;}
+    .profil-media{align-self:auto;min-height:0;margin-bottom:14px;}.profil-illus{height:auto;min-height:0;aspect-ratio:4/3;}.profil-media::before{inset:14px -14px -14px 14px;}}
   @media (max-width:600px){.profil-illus{aspect-ratio:1/1;}.profil-media::before{inset:12px -12px -12px 12px;}.profil-badge{left:14px;bottom:18px;padding:11px 16px 11px 13px;}.profil-badge b{font-size:14px;}}
   .profil-copy p{color:var(--ink-soft);font-size:15.5px;line-height:1.85;margin:18px 0;}
   .vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px;}
@@ -821,16 +825,18 @@
       </div>
       <div class="profil-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 5 5.6.8-4 3.9.9 5.5L12 14.6 7.1 17.2 8 11.7 4 7.8 9.6 7z"/></svg>
-        <span><b>Masjid Muhammadiyah</b><i>Tertua di Kukusan</i></span>
+        <span><b>Masjid Al Mujahidin</b><i>Kukusan</i></span>
       </div>
     </div>
-    <div class="profil-copy reveal">
+    <div class="profil-copy profil-top reveal">
       <div class="eyebrow">Profil Masjid</div>
       <h2 class="section-title">Mengabdi untuk Umat</h2>
       <p class="lead">Masjid Al Mujahidin Kukusan merupakan <strong class="hl">salah satu masjid tertua</strong> yang berdiri di tengah lingkungan padat penduduk di Kelurahan Kukusan, Beji&nbsp;&ndash; Depok, tepatnya di wilayah RT 001 RW 006 Kelurahan Kukusan. Masjid ini berada di bawah naungan Ranting Muhammadiyah Kukusan dan tercatat sebagai Amal Usaha Muhammadiyah (AUM).</p>
       <p>Masjid ini berfungsi sebagai pusat ibadah sekaligus ruang belajar bagi warga sekitar, bahkan wilayah sekitarnya. Dimulai dari masjid dengan bangunan yang sangat sederhana, yang dibangun atas biaya swadaya masyarakat khususnya warga Muhammadiyah, kini masjid ini menaungi kegiatan Sekolah TPA, Majelis Taklim, dan berbagai program sosial yang berjalan setiap pekan.</p>
       <p>Pengelolaan masjid dijalankan oleh Dewan Kemakmuran Masjid (DKM) bersama ikatan pemuda muda yang berkomitmen menjaga kenyamanan beribadah jamaah, kebersihan tempat ibadah, dan keberlanjutan program dakwah.</p>
 
+    </div>
+    <div class="profil-copy profil-bottom reveal">
       <div class="vm-grid">
         <div class="vm-card vm-visi">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
