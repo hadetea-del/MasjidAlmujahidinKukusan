@@ -111,6 +111,10 @@
 
   /* TIMELINE */
   .timeline-sec{padding:90px 0;background:var(--cream-deep);}
+  .tl-empty{margin-top:40px;display:flex;align-items:center;gap:18px;padding:26px 30px;max-width:560px;border:1.5px dashed var(--gold-500);border-radius:var(--radius-md);background:rgba(255,255,255,.55);}
+  .tl-empty-ic{width:52px;height:52px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--gold-100);color:var(--gold-600);}
+  .tl-empty-ic svg{width:26px;height:26px;}
+  .tl-empty p{margin:0;font-size:17px;font-weight:700;color:var(--emerald-950);}
   .timeline{position:relative;margin-top:50px;padding-left:26px;border-left:2px solid var(--line);}
   .t-item{position:relative;padding-bottom:40px;padding-left:30px;}
   .t-item:last-child{padding-bottom:0;}
@@ -192,9 +196,9 @@
   .cta-card p{font-size:13.5px;color:rgba(255,255,255,.72);margin-bottom:22px;line-height:1.65;}
 
   footer{background:var(--azure-950);border-top:1px solid rgba(255,255,255,.1);padding:56px 0 26px;color:rgba(255,255,255,.7);}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;}
-  .foot-brand .name{font-family:var(--font-display);font-size:20px;color:var(--white);}
-  .foot-brand p{font-size:13.5px;line-height:1.7;margin-top:12px;max-width:260px;color:rgba(255,255,255,.55);}
+  .foot-grid{display:grid;grid-template-columns:minmax(0,370px) repeat(3,max-content);justify-content:start;column-gap:72px;row-gap:40px;padding-bottom:40px;}
+  .foot-brand .name{font-family:var(--font-display);font-size:27px;color:var(--white);}
+  .foot-brand p{font-size:13.5px;line-height:1.7;margin-top:12px;max-width:300px;color:rgba(255,255,255,.55);}
   .foot-col h6{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.45);margin:0 0 16px;}
   .foot-col a{display:block;font-size:13.5px;padding:6px 0;color:rgba(255,255,255,.75);}
   .foot-col a:hover{color:var(--gold-300);}
@@ -246,11 +250,11 @@
 
   .brand-sep{width:1px;height:28px;background:var(--line);flex-shrink:0;}
   .brand-muh{width:40px;height:40px;}
-  .foot-logo{display:inline-flex;align-items:center;justify-content:center;width:68px;height:68px;border-radius:18px;background:var(--white);margin-bottom:16px;box-shadow:0 10px 24px -14px rgba(0,0,0,.6);}
-  .foot-logo img{width:50px;height:50px;object-fit:contain;}
+  .foot-logo{display:inline-flex;align-items:center;justify-content:center;width:92px;height:92px;border-radius:24px;background:var(--white);margin-bottom:16px;box-shadow:0 10px 24px -14px rgba(0,0,0,.6);}
+  .foot-logo img{width:68px;height:68px;object-fit:contain;}
   @media (max-width:600px){.brand-sep{display:none;}.brand-muh{width:30px;height:30px;}}
   @media (max-width:480px){.brand{gap:8px;}.brand-text .name{font-size:13px;}.nav-cta .btn-gold{padding:8px 12px !important;font-size:11.5px !important;}.nav-cta{gap:6px;}}
-  .foot-logos{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .foot-logos{display:flex;align-items:center;gap:16px;margin-bottom:18px;}
   .foot-logos .foot-logo{margin-bottom:0;}
   .pray-t{display:grid;grid-template-columns:auto auto;column-gap:7px;row-gap:1px;align-items:baseline;border-radius:14px;padding:5px 13px 4px;}
   .pray-t .pr{font-variant-numeric:tabular-nums;grid-column:1/-1;text-align:center;font-size:10.5px;color:rgba(255,255,255,.6);white-space:nowrap;}
@@ -290,9 +294,9 @@
       <a href="index.html#beranda">Beranda</a>
       <a href="tentang-kami.html" class="active">Tentang</a>
       <a href="tokoh.html">Tokoh</a>
+      <a href="index.html#galeri">Galeri</a>
       <a href="index.html#infak">Infak</a>
       <a href="index.html#fundraising">Donasi</a>
-      <a href="index.html#galeri">Galeri</a>
       <a href="index.html#tausiyah">Tausiyah</a>
       <a href="index.html#video">Video</a>
       <a href="index.html#kontak">Kontak</a>
@@ -313,9 +317,9 @@
     <a href="index.html#beranda">Beranda</a>
     <a href="tentang-kami.html">Tentang Kami</a>
     <a href="tokoh.html">Tokoh Kami</a>
+    <a href="index.html#galeri">Galeri Kegiatan</a>
     <a href="index.html#infak">Laporan Infak</a>
     <a href="index.html#fundraising">Program Donasi</a>
-    <a href="index.html#galeri">Galeri Kegiatan</a>
     <a href="index.html#tausiyah">Tausiyah</a>
     <a href="index.html#video">Video Kajian</a>
     <a href="index.html#kontak">Kontak Kami</a>
@@ -326,7 +330,7 @@
   <div class="page-header-inner reveal in-view">
     <div class="breadcrumb"><a href="index.html#beranda">Beranda</a> &nbsp;/&nbsp; Tentang Kami</div>
     <div class="hero-arabic">من بنى لله مسجدا</div>
-    <h1>Mengenal lebih dekat Masjid Al Mujahidin Kukusan</h1>
+    <h1>Mengenal Lebih Dekat Masjid Al Mujahidin Kukusan</h1>
     <p>Perjalanan, visi, struktur pengurus, dan fasilitas yang kami siapkan untuk melayani jamaah dan warga sekitar setiap hari.</p>
   </div>
 </header>
@@ -338,7 +342,7 @@
     </div>
     <div class="intro-copy reveal">
       <div class="eyebrow">Siapa Kami</div>
-      <h2 class="section-title">Rumah ibadah milik bersama</h2>
+      <h2 class="section-title">Masjid Muhammadiyah Tertua di Kukusan</h2>
       <p>Masjid Al Mujahidin Kukusan berawal dari musala kecil hasil swadaya warga di tahun 1998. Seiring bertambahnya jamaah, bangunan diperluas secara bertahap hingga menjadi masjid raya yang kini menampung ratusan jamaah setiap sholat Jumat, sekaligus menjadi pusat kegiatan pendidikan dan sosial bagi warga sekitar.</p>
       <p>Kami percaya masjid bukan hanya tempat sholat, tapi juga ruang belajar, ruang berbagi, dan ruang bertemu antarwarga lintas usia. Karena itu, seluruh program kami — dari kajian rutin hingga santunan sosial — dirancang terbuka untuk siapa saja tanpa terkecuali.</p>
       <div class="stat-strip">
@@ -356,34 +360,11 @@
   <div class="wrap">
     <div class="reveal" style="margin-bottom:20px;">
       <div class="eyebrow">Perjalanan Kami</div>
-      <h2 class="section-title">Jejak langkah Masjid Al Mujahidin Kukusan</h2>
+      <h2 class="section-title">Jejak Langkah Masjid Al Mujahidin Kukusan</h2>
     </div>
-    <div class="timeline reveal">
-      <div class="t-item">
-        <div class="t-year">1998</div>
-        <h4>Berdiri sebagai musala swadaya warga</h4>
-        <p>Dibangun secara gotong royong oleh warga sekitar di atas lahan wakaf seluas 400 m², awalnya hanya menampung sekitar 80 jamaah.</p>
-      </div>
-      <div class="t-item">
-        <div class="t-year">2005</div>
-        <h4>Renovasi pertama dan perluasan bangunan</h4>
-        <p>Bangunan diperluas menjadi dua lantai untuk menampung jamaah yang terus bertambah, sekaligus penambahan tempat wudhu terpisah.</p>
-      </div>
-      <div class="t-item">
-        <div class="t-year">2012</div>
-        <h4>Pembangunan gedung TPA dan aula serbaguna</h4>
-        <p>Dibangun ruang khusus untuk pendidikan Al-Qur'an anak-anak serta aula yang digunakan untuk kajian dan acara sosial.</p>
-      </div>
-      <div class="t-item">
-        <div class="t-year">2020</div>
-        <h4>Renovasi kubah dan penataan halaman</h4>
-        <p>Kubah utama diperbarui, halaman ditata ulang dengan area parkir yang lebih luas dan taman kecil di sisi masjid.</p>
-      </div>
-      <div class="t-item">
-        <div class="t-year">2026</div>
-        <h4>Digitalisasi layanan jamaah</h4>
-        <p>Masjid mulai menerbitkan laporan keuangan digital dan jadwal kegiatan daring agar lebih mudah diakses jamaah dan warga sekitar.</p>
-      </div>
+    <div class="tl-empty reveal">
+      <div class="tl-empty-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12M6 22h12"/><path d="M7 2v4a5 5 0 0 0 2 4l3 2-3 2a5 5 0 0 0-2 4v4"/><path d="M17 2v4a5 5 0 0 1-2 4l-3 2 3 2a5 5 0 0 1 2 4v4"/></svg></div>
+      <p>Dalam proses pengumpulan informasi</p>
     </div>
   </div>
 </section>
@@ -392,7 +373,7 @@
   <div class="wrap">
     <div class="vm-head reveal">
       <div class="eyebrow">Arah Kami</div>
-      <h2 class="section-title">Visi dan misi</h2>
+      <h2 class="section-title">Visi dan Misi</h2>
     </div>
     <div class="vm-two">
       <div class="vm-panel reveal">
@@ -467,7 +448,7 @@
   <div class="wrap">
     <div class="reveal" style="margin-bottom:20px;">
       <div class="eyebrow">Fasilitas</div>
-      <h2 class="section-title">Fasilitas yang tersedia bagi jamaah</h2>
+      <h2 class="section-title">Fasilitas yang Tersedia bagi Jamaah</h2>
     </div>
     <div class="fas-grid reveal">
       <div class="fas-card">
@@ -518,7 +499,7 @@
   <div class="wrap legal-grid">
     <div class="reveal">
       <div class="eyebrow">Legalitas</div>
-      <h2 class="section-title">Dikelola secara resmi dan transparan</h2>
+      <h2 class="section-title">Dikelola Secara Resmi dan Transparan</h2>
       <p>Masjid Al Mujahidin Kukusan berdiri di atas tanah wakaf yang telah bersertifikat dan dikelola oleh Yayasan Al-Mujahidin Kukusan yang terdaftar resmi. Seluruh pengelolaan dana dan aset masjid dilaporkan secara berkala kepada jamaah melalui laporan bulanan.</p>
       <div class="legal-item">Akta Yayasan No. 14 Tahun 1999, Notaris Wilayah Kota Depok</div>
       <div class="legal-item">Sertifikat Tanah Wakaf No. W.2/BA.03/1999</div>
