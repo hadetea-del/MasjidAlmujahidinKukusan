@@ -928,6 +928,33 @@
   </div>
 </section>
 
+<!-- Jadwal Pengajian Pekanan Ranting Muhammadiyah Kukusan: satu poster per bulan (isinya agenda per pekan).
+     Section ini tersembunyi otomatis selama belum ada poster yang tayang. -->
+<section class="khotib-sec" id="pengajian-ranting" hidden>
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:36px;">
+      <div class="eyebrow">Pengajian Pekanan</div>
+      <h2 class="section-title">Jadwal Pengajian Ranting Muhammadiyah Kukusan</h2>
+      <p class="section-lede">Setiap malam Selasa, ba&rsquo;da Sholat Maghrib s.d Isya. Terbuka untuk seluruh jamaah dan warga sekitar, tanpa pendaftaran.</p>
+    </div>
+    <div class="kh-grid reveal" id="prmGrid" data-max-show="4">
+      <!-- Poster Pengajian Ranting 2027 (Jan-Mei + info libur): data-date = tanggal pengajian TERAKHIR yang tertulis di poster itu
+           (kartu tayang sampai 3 hari setelah tanggal tersebut). Libur Kegiatan: tayang sampai kegiatan aktif kembali, 5 April 2027.
+           Aturan tayang sama dengan Khotib Jum'at: yang akan datang tampil lebih dulu, maksimal 4 kartu, sisanya di balik tombol "Jadwal Selanjutnya".
+           Untuk bulan berikutnya, salin satu blok figure, ganti tanggal dan gambarnya. -->
+      <figure class="kh-card" data-date="2027-02-01"><img src="poster/pengajian-ranting-2027-01.jpg" width="1080" height="1080" alt="Jadwal Pengajian Pekanan Ranting Muhammadiyah Kukusan, Januari 2027. Setiap Senin ba’da Sholat Maghrib sampai Isya." loading="lazy"></figure>
+      <figure class="kh-card" data-date="2027-03-08"><img src="poster/pengajian-ranting-2027-02.jpg" width="1080" height="1080" alt="Jadwal Pengajian Pekanan Ranting Muhammadiyah Kukusan, Februari 2027. Libur selama Ramadhan 1448 H dan Idul Fitri 1448 H." loading="lazy"></figure>
+      <figure class="kh-card" data-date="2027-04-05"><img src="poster/pengajian-ranting-libur-2027.jpg" width="1080" height="1080" alt="Info libur kegiatan Pengajian Ranting Muhammadiyah Kukusan: Ramadhan dan Idul Fitri 1448 H, 8 Februari sampai 29 Maret 2027. Kegiatan aktif kembali 5 April 2027." loading="lazy"></figure>
+      <figure class="kh-card" data-date="2027-04-12"><img src="poster/pengajian-ranting-2027-03.jpg" width="1080" height="1080" alt="Jadwal Pengajian Pekanan Ranting Muhammadiyah Kukusan, Maret 2027. Libur Idul Fitri 1448 H, kegiatan aktif kembali 5 April 2027." loading="lazy"></figure>
+      <figure class="kh-card" data-date="2027-05-03"><img src="poster/pengajian-ranting-2027-04.jpg" width="1080" height="1080" alt="Jadwal Pengajian Pekanan Ranting Muhammadiyah Kukusan, April 2027. Setiap Senin ba’da Sholat Maghrib sampai Isya." loading="lazy"></figure>
+      <figure class="kh-card" data-date="2027-05-31"><img src="poster/pengajian-ranting-2027-05.jpg" width="1080" height="1080" alt="Jadwal Pengajian Pekanan Ranting Muhammadiyah Kukusan, Mei 2027. Setiap Senin ba’da Sholat Maghrib sampai Isya." loading="lazy"></figure>
+    </div>
+    <div class="event-more" id="prmMore" hidden>
+      <button type="button" class="btn btn-line" id="prmMoreBtn" aria-expanded="false">Jadwal Selanjutnya</button>
+    </div>
+  </div>
+</section>
+
 <section class="khotib-sec" id="jumat">
   <div class="wrap">
     <div class="reveal" style="margin-bottom:36px;">
@@ -1917,9 +1944,10 @@
     }
   }
 
-  /* ===== Jadwal Khotib Jum'at: aturan tayang sama dengan Agenda ===== */
-  var khGrid = document.getElementById('khotibGrid');
-  if (khGrid){
+  /* ===== Kartu poster bulanan (Khotib Jum'at, Pengajian Ranting): aturan tayang sama dengan Agenda ===== */
+  function initPosterGrid(cfg){
+    var khGrid = document.getElementById(cfg.grid);
+    if (!khGrid) return;
     var khNow = new Date();
     function khFmt(d){ return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
     var khToday = khFmt(khNow);
@@ -1943,8 +1971,12 @@
       khGrid.appendChild(c);
       if (idx >= khMax){ c.style.display = 'none'; khExtra.push(c); }
     });
-    var khEmpty = document.getElementById('khotibEmpty');
-    if (khEmpty && !(khUp.length + khDone.length)) khEmpty.hidden = false;
+    var khTotal = khUp.length + khDone.length;
+    /* section yang disembunyikan sampai ada poster yang tayang */
+    var khSec = cfg.section ? document.getElementById(cfg.section) : null;
+    if (khSec && khTotal) khSec.hidden = false;
+    var khEmpty = document.getElementById(cfg.empty);
+    if (khEmpty && !khTotal && !cfg.section) khEmpty.hidden = false;
     /* klik kartu -> tampil besar */
     var khLb = document.querySelector('.poster-lb');
     if (!khLb){
@@ -1961,7 +1993,7 @@
       c.addEventListener('click', openKh);
       c.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openKh(); } });
     });
-    var khMoreWrap = document.getElementById('khotibMore'), khMoreBtn = document.getElementById('khotibMoreBtn');
+    var khMoreWrap = document.getElementById(cfg.more), khMoreBtn = document.getElementById(cfg.moreBtn);
     if (khMoreWrap && khMoreBtn && khExtra.length){
       khMoreWrap.hidden = false;
       var khOpen = false;
@@ -1973,6 +2005,8 @@
       });
     }
   }
+  initPosterGrid({grid:'khotibGrid', empty:'khotibEmpty', more:'khotibMore', moreBtn:'khotibMoreBtn'});
+  initPosterGrid({grid:'prmGrid', section:'pengajian-ranting', more:'prmMore', moreBtn:'prmMoreBtn'});
 
   if ('IntersectionObserver' in window){
     var obs = new IntersectionObserver(function(entries){
