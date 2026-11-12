@@ -695,6 +695,33 @@
   .taus-ref a:hover{text-decoration:underline;}
   .taus-list{position:sticky;top:130px;align-self:start;}
   .taus-more-m{display:none;}
+  /* --- Tausiyah panjang: 7 Alasan Bangga Menjadi Muslim --- */
+  .taus-feature .taus-h4{font-family:var(--font-display);font-size:21px;line-height:1.35;color:var(--emerald-950);margin:20px 0 10px;}
+  .taus-alasan{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);}
+  .taus-alasan > .taus-h4{margin-top:0;}
+  .taus-alasan h4:not(.taus-h4){font-family:var(--font-display);font-size:21px;line-height:1.35;color:var(--emerald-950);margin:0 0 12px;display:flex;gap:12px;align-items:flex-start;}
+  .taus-an{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--emerald-950);color:#fff;font-family:var(--font-body);font-size:15px;font-weight:700;margin-top:1px;}
+  .taus-ayat{margin:6px 0 16px;padding:14px 18px 12px;border-left:4px solid var(--gold-500);background:var(--cream);border-radius:0 var(--radius-sm) var(--radius-sm) 0;}
+  .taus-ayat-ref{font-size:12px;font-weight:700;color:var(--gold-600);letter-spacing:.04em;margin-bottom:6px;}
+  .taus-feature .taus-ar{font-family:'Amiri',serif;direction:rtl;text-align:right;font-size:26px !important;line-height:2.1 !important;color:var(--emerald-950) !important;margin:0 0 8px;}
+  .taus-feature .taus-arti{font-size:14px;font-style:italic;color:var(--emerald-950);line-height:1.7;margin:0 0 10px;}
+  .taus-ayat .taus-arti{margin:0;}
+  .taus-feature .taus-sub{font-weight:700;color:var(--emerald-950);font-size:14.5px;margin:14px 0 8px;}
+  .taus-bullets{margin:2px 0 14px;padding-left:22px;list-style:disc;line-height:1.75;color:var(--ink-soft);font-size:14.5px;}
+  .taus-bullets li{padding-left:2px;}
+  .taus-ringkas{margin:26px 0 4px;padding:20px 22px;border-radius:var(--radius-md);background:var(--emerald-950);color:#fff;text-align:center;}
+  .taus-ringkas .taus-ringkas-t{font-family:var(--font-display);font-size:22px;color:var(--gold-300);margin-bottom:4px;}
+  .taus-feature .taus-ringkas .taus-ar{color:#fff !important;text-align:center;font-size:24px !important;margin:2px 0 0;}
+  .taus-feature .taus-ringkas .taus-arti{color:var(--gold-100);margin:0 0 10px;text-align:center;}
+  .taus-ringkas ol{list-style:none;counter-reset:ra;margin:8px 0 0;padding:0;text-align:left;display:grid;gap:8px;}
+  .taus-ringkas ol li{counter-increment:ra;display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.55;color:#fff;}
+  .taus-ringkas ol li::before{content:counter(ra);flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--gold-500);color:var(--emerald-950);font-weight:800;font-size:12.5px;display:inline-flex;align-items:center;justify-content:center;}
+  .taus-feature .taus-tag{color:var(--gold-600) !important;font-weight:700;font-size:13px !important;margin-top:14px !important;}
+  @media (max-width:640px){
+    .taus-feature .taus-ar{font-size:22px !important;}
+    .taus-alasan h4:not(.taus-h4),.taus-feature .taus-h4{font-size:19px;}
+    .taus-ayat{padding:12px 14px 10px;}
+  }
   @media (max-width:980px){
     .taus-grid{display:flex;flex-direction:column;gap:18px;}
     .taus-list{order:-1;align-items:flex-start;align-self:stretch;max-width:100%;min-width:0;position:sticky;top:76px;z-index:5;display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;padding:10px 2px;margin:0;background:var(--cream);-webkit-overflow-scrolling:touch;scrollbar-width:thin;}
@@ -1348,7 +1375,7 @@
     <div class="reveal" style="margin-bottom:44px;">
       <div class="eyebrow">Tausiyah Pekan Ini</div>
       <h2 class="section-title">Renungan dan Nasihat Pekan Ini</h2>
-      <p class="section-lede">Lima tema renungan sebagai bekal iman sehari-hari. Pilih salah satu tema untuk membacanya.</p>
+      <p class="section-lede">Enam tema renungan sebagai bekal iman sehari-hari. Pilih salah satu tema untuk membacanya.</p>
     </div>
     <div class="taus-grid">
       <div class="taus-feature reveal">
@@ -1357,6 +1384,27 @@
         </div>
         <div class="body">
           <div class="taus-panel on" id="tausPanel0">
+            <h3>7 Alasan Bangga Menjadi Muslim</h3>
+            <div class="by">Tema: Bangga Menjadi Muslim</div>
+            <h4 class="taus-h4">Pendahuluan</h4>
+            <p>Alhamdulillahi rabbil 'alamin. Segala puji bagi Allah SWT yang telah memberikan kepada kita nikmat yang sangat besar, yaitu nikmat iman dan Islam.</p>
+            <p>Saudara-saudaraku yang dirahmati Allah,</p>
+            <p>Pernahkah kita merenungkan, mengapa kita harus bangga menjadi seorang Muslim?</p>
+            <p>Apakah karena kita lahir dari keluarga Muslim? Apakah karena nama kita memiliki unsur Islami? Ataukah karena kita tinggal di lingkungan yang mayoritas beragama Islam?</p>
+            <p>Sesungguhnya, kebanggaan menjadi seorang Muslim bukan sekadar karena identitas atau keturunan. Namun, karena kita meyakini bahwa Islam adalah agama yang Allah ridai, agama yang membawa petunjuk bagi kehidupan manusia, serta jalan menuju keselamatan dunia dan akhirat.</p>
+            <p>Dalam kesempatan ini, mari kita membahas tujuh alasan mengapa kita harus bangga menjadi seorang Muslim.</p>
+            <div class="taus-alasan"><h4><span class="taus-an">1</span><span>Islam adalah agama yang datang dari Allah SWT</span></h4><p>Islam bukan agama yang dibuat oleh manusia. Islam adalah agama yang berasal dari Allah SWT, Tuhan yang menciptakan alam semesta dan seluruh kehidupan.</p><p>Allah SWT berfirman:</p><div class="taus-ayat"><div class="taus-ayat-ref">QS. Ali Imran ayat 19</div><p class="taus-ar" lang="ar" dir="rtl">إِنَّ الدِّينَ عِندَ اللَّهِ الْإِسْلَامُ</p><p class="taus-arti"><strong>Artinya:</strong> &ldquo;Sesungguhnya agama di sisi Allah ialah Islam.&rdquo;</p></div><p class="taus-sub">Penjelasan:</p><p>Mengapa kita harus bangga menjadi Muslim?</p><p>Karena kita menjalani kehidupan berdasarkan petunjuk dari Zat Yang Maha Mengetahui segala sesuatu.</p><p>Manusia memiliki keterbatasan. Akal manusia tidak selalu mampu menentukan mana yang benar dan mana yang salah. Apa yang dianggap baik oleh manusia belum tentu baik menurut Allah.</p><p>Oleh karena itu, Allah menurunkan agama sebagai pedoman kehidupan.</p><p>Islam mengajarkan bagaimana kita berhubungan dengan Allah, bagaimana memperlakukan orang tua, bagaimana mencari rezeki, bagaimana bermasyarakat, hingga bagaimana menghadapi kematian.</p><div class="taus-steps"><strong>Pelajaran dalam kehidupan:</strong><ul class=""><li>Jangan malu menunjukkan identitas sebagai Muslim.</li><li>Jadikan Al-Qur'an dan sunnah sebagai pedoman hidup.</li><li>Jangan hanya mengikuti keinginan manusia, tetapi utamakan keridaan Allah.</li></ul></div></div>
+            <div class="taus-alasan"><h4><span class="taus-an">2</span><span>Islam adalah agama seluruh Nabi dan Rasul</span></h4><p>Islam bukan hanya ajaran yang dibawa Nabi Muhammad SAW. Semua nabi mengajarkan tauhid, yaitu mengajak manusia menyembah Allah Yang Maha Esa.</p><p>Allah SWT berfirman:</p><div class="taus-ayat"><div class="taus-ayat-ref">QS. Al-Anbiya ayat 25</div><p class="taus-ar" lang="ar" dir="rtl">وَمَا أَرْسَلْنَا مِن قَبْلِكَ مِن رَّسُولٍ إِلَّا نُوحِي إِلَيْهِ أَنَّهُ لَا إِلَٰهَ إِلَّا أَنَا فَاعْبُدُونِ</p><p class="taus-arti"><strong>Artinya:</strong> &ldquo;Dan Kami tidak mengutus seorang rasul pun sebelum engkau (Muhammad), melainkan Kami wahyukan kepadanya bahwa tidak ada Tuhan selain Aku, maka sembahlah Aku.&rdquo;</p></div><p class="taus-sub">Penjelasan:</p><p>Nabi Adam, Nabi Nuh, Nabi Ibrahim, Nabi Musa, Nabi Isa, dan nabi-nabi lainnya membawa ajaran untuk menyembah Allah.</p><p>Mereka memiliki syariat yang berbeda sesuai ketentuan Allah pada zamannya, tetapi inti dakwah mereka sama, yaitu tauhid dan ketundukan kepada Allah.</p><p>Maka, Islam bukan ajaran yang muncul tanpa sejarah. Islam merupakan kelanjutan risalah tauhid yang disempurnakan melalui Nabi Muhammad SAW.</p><div class="taus-steps"><strong>Pelajaran dalam kehidupan:</strong><ul class=""><li>Kita harus menghormati seluruh nabi dan rasul Allah. Tidak boleh membeda-bedakan keimanan kita terhadap para nabi yang disebutkan dalam Al-Qur'an.</li></ul></div></div>
+            <div class="taus-alasan"><h4><span class="taus-an">3</span><span>Islam adalah agama yang sempurna</span></h4><p>Allah SWT berfirman:</p><div class="taus-ayat"><div class="taus-ayat-ref">QS. Al-Maidah ayat 3</div><p class="taus-ar" lang="ar" dir="rtl">الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ الْإِسْلَامَ دِينًا</p><p class="taus-arti"><strong>Artinya:</strong> &ldquo;Pada hari ini telah Aku sempurnakan agamamu untukmu, telah Aku cukupkan nikmat-Ku bagimu, dan telah Aku ridai Islam sebagai agamamu.&rdquo;</p></div><p class="taus-sub">Penjelasan:</p><p>Kesempurnaan Islam berarti ajaran Islam telah memberikan pedoman yang lengkap bagi manusia dalam menjalani kehidupan.</p><p>Islam tidak hanya mengatur ibadah seperti salat, puasa, zakat, dan haji.</p><p>Islam juga mengatur:</p><ul class="taus-bullets"><li>Akhlak dan perilaku.</li><li>Hubungan suami istri dan keluarga.</li><li>Pendidikan dan ilmu pengetahuan.</li><li>Ekonomi dan perdagangan.</li><li>Keadilan dan kepemimpinan.</li><li>Hubungan sosial dan kemasyarakatan.</li></ul><p>Islam mengajarkan bahwa seorang Muslim tidak cukup hanya rajin beribadah, tetapi juga harus jujur dalam berdagang, amanah dalam bekerja, adil dalam memimpin, dan baik kepada sesama manusia.</p><p>Perlu dipahami, agama Islam sempurna, tetapi umat Islam sebagai manusia tetap memiliki kekurangan dan bisa melakukan kesalahan.</p><div class="taus-steps"><strong>Pelajaran dalam kehidupan:</strong><ul class=""><li>Jangan hanya menjadi Muslim yang rajin beribadah, tetapi jadilah Muslim yang juga memiliki akhlak mulia.</li></ul></div></div>
+            <div class="taus-alasan"><h4><span class="taus-an">4</span><span>Nabi Muhammad SAW adalah penutup para nabi dan rasul</span></h4><p>Allah SWT berfirman:</p><div class="taus-ayat"><div class="taus-ayat-ref">QS. Al-Ahzab ayat 40</div><p class="taus-ar" lang="ar" dir="rtl">مَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ مِّن رِّجَالِكُمْ وَلَٰكِن رَّسُولَ اللَّهِ وَخَاتَمَ النَّبِيِّينَ</p><p class="taus-arti"><strong>Artinya:</strong> &ldquo;Muhammad itu bukanlah bapak dari seseorang di antara kamu, tetapi dia adalah utusan Allah dan penutup para nabi.&rdquo;</p></div><p class="taus-sub">Penjelasan:</p><p>Nabi Muhammad SAW merupakan nabi dan rasul terakhir. Tidak ada nabi lagi setelah beliau.</p><p>Beliau diutus bukan hanya untuk satu kelompok masyarakat, melainkan membawa risalah untuk seluruh umat manusia.</p><p>Allah SWT juga berfirman dalam QS. Al-Anbiya ayat 107:</p><div class="taus-ayat"><div class="taus-ayat-ref">QS. Al-Anbiya ayat 107</div><p class="taus-ar" lang="ar" dir="rtl">وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَالَمِينَ</p><p class="taus-arti"><strong>Artinya:</strong> &ldquo;Dan Kami tidak mengutus engkau (Muhammad), melainkan untuk menjadi rahmat bagi seluruh alam.&rdquo;</p></div><p>Perhatikan kata rahmatan lil 'alamin. Artinya, kehadiran Nabi Muhammad SAW membawa rahmat bagi seluruh alam.</p><p>Beliau mengajarkan kasih sayang, kejujuran, kesabaran, keadilan, dan kepedulian terhadap sesama.</p><div class="taus-steps"><strong>Pelajaran dalam kehidupan:</strong><ul class=""><li>Jika kita mengaku sebagai umat Nabi Muhammad SAW, maka kita harus berusaha mengikuti akhlak beliau.</li><li>Jangan hanya bangga dengan gelar umat Nabi Muhammad, tetapi tidak mau meneladani perilakunya.</li></ul></div></div>
+            <div class="taus-alasan"><h4><span class="taus-an">5</span><span>Al-Qur'an adalah kitab suci yang terjaga keasliannya</span></h4><p>Allah SWT berfirman:</p><div class="taus-ayat"><div class="taus-ayat-ref">QS. Al-Hijr ayat 9</div><p class="taus-ar" lang="ar" dir="rtl">إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ</p><p class="taus-arti"><strong>Artinya:</strong> &ldquo;Sesungguhnya Kamilah yang menurunkan Al-Qur'an, dan pasti Kami pula yang memeliharanya.&rdquo;</p></div><p class="taus-sub">Penjelasan:</p><p>Al-Qur'an merupakan wahyu Allah yang diturunkan kepada Nabi Muhammad SAW melalui Malaikat Jibril.</p><p>Al-Qur'an bukan sekadar kitab untuk dibaca ketika ada acara keagamaan. Al-Qur'an adalah petunjuk kehidupan.</p><p>Di dalamnya terdapat:</p><ul class="taus-bullets"><li>Pedoman akidah dan keimanan.</li><li>Perintah dan larangan Allah.</li><li>Kisah para nabi dan umat terdahulu.</li><li>Pelajaran tentang kesabaran dan keikhlasan.</li><li>Pedoman akhlak dan kehidupan manusia.</li><li>Kabar tentang kehidupan akhirat.</li></ul><p>Allah telah menjamin pemeliharaan Al-Qur'an. Umat Islam menjaga dan mewariskannya melalui hafalan dan penulisan dari generasi ke generasi.</p><p>Namun, ada satu pertanyaan penting untuk kita renungkan:</p><p>Sudahkah kita membaca Al-Qur'an setiap hari? Sudahkah kita memahami dan mengamalkan isinya?</p><p>Sebab Al-Qur'an bukan hanya untuk disimpan di lemari atau dibaca ketika bulan Ramadan.</p><div class="taus-steps"><strong>Pelajaran dalam kehidupan:</strong><ul class=""><li>Jadikan Al-Qur'an sebagai sahabat kehidupan. Bacalah, pelajari maknanya, dan amalkan ajarannya.</li></ul></div></div>
+            <div class="taus-alasan"><h4><span class="taus-an">6</span><span>Islam membawa kedamaian dan keselamatan dunia akhirat</span></h4><p>Islam berasal dari akar kata yang berkaitan dengan keselamatan, kedamaian, dan ketundukan kepada Allah.</p><p>Allah SWT berfirman:</p><div class="taus-ayat"><div class="taus-ayat-ref">QS. Al-Baqarah ayat 208</div><p class="taus-ar" lang="ar" dir="rtl">يَا أَيُّهَا الَّذِينَ آمَنُوا ادْخُلُوا فِي السِّلْمِ كَافَّةً</p><p class="taus-arti"><strong>Artinya:</strong> &ldquo;Wahai orang-orang yang beriman! Masuklah ke dalam Islam secara keseluruhan.&rdquo;</p></div><p class="taus-sub">Penjelasan:</p><p>Islam mengajarkan manusia untuk hidup dengan damai, menjaga persaudaraan, menghormati hak orang lain, serta menghindari permusuhan dan kezaliman.</p><p>Islam mengajarkan kedamaian dalam berbagai aspek:</p><ul class="taus-bullets"><li>Damai dengan Allah melalui ibadah dan ketakwaan.</li><li>Damai dengan diri sendiri melalui kesabaran dan rasa syukur.</li><li>Damai dengan keluarga melalui kasih sayang.</li><li>Damai dengan tetangga melalui kepedulian.</li><li>Damai dengan masyarakat melalui keadilan dan toleransi.</li></ul><p>Kedamaian dunia bukan berarti hidup tanpa ujian. Seorang Muslim tetap bisa menghadapi kesulitan, kehilangan, dan musibah.</p><p>Namun, iman memberikan kekuatan untuk menghadapinya.</p><p>Tujuan akhir kehidupan seorang Muslim bukan hanya memperoleh kebahagiaan dunia, tetapi juga mendapatkan keselamatan di akhirat.</p><div class="taus-steps"><strong>Pelajaran dalam kehidupan:</strong><ul class=""><li>Jadilah Muslim yang kehadirannya membawa ketenangan, bukan ketakutan; membawa manfaat, bukan kerusakan.</li></ul></div></div>
+            <div class="taus-alasan"><h4><span class="taus-an">7</span><span>Islam bukan agama terorisme, melainkan agama yang mengajarkan toleransi</span></h4><p>Allah SWT berfirman:</p><div class="taus-ayat"><div class="taus-ayat-ref">QS. Al-Mumtahanah ayat 8</div><p class="taus-ar" lang="ar" dir="rtl">لَّا يَنْهَاكُمُ اللَّهُ عَنِ الَّذِينَ لَمْ يُقَاتِلُوكُمْ فِي الدِّينِ وَلَمْ يُخْرِجُوكُم مِّن دِيَارِكُمْ أَن تَبَرُّوهُمْ وَتُقْسِطُوا إِلَيْهِمْ</p><p class="taus-arti"><strong>Artinya:</strong> &ldquo;Allah tidak melarang kamu berbuat baik dan berlaku adil terhadap orang-orang yang tidak memerangimu karena agama dan tidak mengusirmu dari kampung halamanmu.&rdquo;</p></div><p class="taus-sub">Penjelasan:</p><p>Islam tidak mengajarkan kekerasan terhadap orang yang tidak bersalah.</p><p>Islam mengajarkan umatnya untuk berlaku adil, menghormati perbedaan, berbuat baik kepada tetangga, dan menjaga hubungan sosial dengan siapa pun.</p><p>Rasulullah SAW juga merupakan teladan dalam hal kasih sayang dan sikap memaafkan.</p><p>Perlu kita pahami bahwa tindakan seseorang yang mengaku Muslim tidak otomatis mencerminkan ajaran Islam.</p><p>Jika ada orang melakukan kekerasan, kezaliman, atau teror atas nama agama, maka tindakannya harus dinilai berdasarkan ajaran Islam yang benar, bukan dibenarkan hanya karena membawa simbol agama.</p><p>Toleransi bukan berarti mencampuradukkan akidah atau meninggalkan keyakinan. Toleransi berarti menghormati hak orang lain untuk menjalankan keyakinannya tanpa melakukan kezaliman.</p><p>Allah SWT berfirman dalam QS. Al-Kafirun ayat 6:</p><div class="taus-ayat"><div class="taus-ayat-ref">QS. Al-Kafirun ayat 6</div><p class="taus-ar" lang="ar" dir="rtl">لَكُمْ دِينُكُمْ وَلِيَ دِينِ</p><p class="taus-arti"><strong>Artinya:</strong> &ldquo;Untukmu agamamu, dan untukku agamaku.&rdquo;</p></div><div class="taus-steps"><strong>Pelajaran dalam kehidupan:</strong><ul class=""><li>Jangan menghina agama orang lain.</li><li>Jangan melakukan kekerasan atas nama agama.</li><li>Hormati perbedaan keyakinan.</li><li>Berbuat baik kepada siapa pun.</li><li>Jadilah contoh bahwa Islam adalah agama yang membawa rahmat.</li></ul></div></div>
+            <div class="taus-alasan"><h4 class="taus-h4">Penutup: Bangga Menjadi Muslim Harus Dibuktikan dengan Amal</h4><p>Saudara-saudaraku yang dirahmati Allah,</p><p>Setelah kita memahami tujuh alasan tersebut, mari kita bertanya kepada diri sendiri:</p><ul class="taus-bullets"><li>Apakah kita sudah bangga menjadi seorang Muslim?</li><li>Apakah kita sudah menjalankan perintah Allah?</li><li>Apakah kita sudah menjadikan Rasulullah sebagai teladan?</li><li>Apakah kita sudah membaca dan mengamalkan Al-Qur'an?</li><li>Apakah kehadiran kita sudah memberikan manfaat bagi orang lain?</li></ul><p>Jangan sampai kita hanya bangga dengan identitas Islam, tetapi perilaku kita justru jauh dari ajaran Islam.</p><p>Jangan sampai kita rajin salat, tetapi masih suka menyakiti orang lain.</p><p>Jangan sampai kita pandai membaca Al-Qur'an, tetapi tidak jujur dalam bekerja.</p><p>Jangan sampai kita mengaku mencintai Rasulullah, tetapi tidak mau meneladani akhlaknya.</p><p>Karena sesungguhnya, kemuliaan seorang Muslim tidak hanya terlihat dari penampilannya, tetapi juga dari iman, ketakwaan, dan akhlaknya.</p><p>Allah SWT berfirman:</p><div class="taus-ayat"><div class="taus-ayat-ref">QS. Al-Hujurat ayat 13</div><p class="taus-ar" lang="ar" dir="rtl">إِنَّ أَكْرَمَكُمْ عِندَ اللَّهِ أَتْقَاكُمْ</p><p class="taus-arti"><strong>Artinya:</strong> &ldquo;Sesungguhnya orang yang paling mulia di antara kamu di sisi Allah ialah orang yang paling bertakwa.&rdquo;</p></div><p>Maka, marilah kita menjadi Muslim yang bangga terhadap agamanya, kuat imannya, luas ilmunya, baik akhlaknya, dan bermanfaat bagi sesama manusia.</p></div>
+            <div class="taus-ringkas"><div class="taus-ringkas-t">7 Alasan Bangga Menjadi Muslim</div><p class="taus-ar taus-ar-c" lang="ar" dir="rtl">الحمد لله على نعمة الإسلام</p><p class="taus-arti taus-ar-c">Alhamdulillah atas nikmat Islam.</p><ol><li>Islam datang dari Allah SWT.</li><li>Islam adalah agama seluruh nabi dalam ajaran tauhid.</li><li>Islam adalah agama yang sempurna.</li><li>Nabi Muhammad SAW adalah penutup para nabi.</li><li>Al-Qur'an adalah kitab suci yang terjaga.</li><li>Islam membawa kedamaian dan keselamatan.</li><li>Islam mengajarkan keadilan, kasih sayang, dan toleransi.</li></ol></div>
+            <div class="taus-alasan"><h4 class="taus-h4">Doa penutup</h4><p class="taus-ar" lang="ar" dir="rtl">اللَّهُمَّ ثَبِّتْ قُلُوبَنَا عَلَى دِينِكَ</p><p class="taus-arti">Allahumma tsabbit qulubana 'ala dinik.</p><p class="taus-arti">“Ya Allah, teguhkanlah hati kami di atas agama-Mu.”</p><p>Ya Allah, jadikanlah kami hamba-hamba-Mu yang senantiasa bersyukur atas nikmat iman dan Islam. Kuatkan iman kami, perbaiki akhlak kami, jadikan Al-Qur'an sebagai pedoman hidup kami, dan wafatkanlah kami dalam keadaan husnul khatimah.</p><p>Aamiin ya Rabbal 'alamin.</p><p class="taus-tag">#siapalmujahidinkukusan</p></div>
+          </div>
+          <div class="taus-panel" id="tausPanel1">
             <h3>Sabar dan Syukur Adalah Dua Sayap Iman</h3>
             <div class="by">Tema: Keutamaan Sabar dan Syukur</div>
             <blockquote class="taus-dalil">&ldquo;Sungguh menakjubkan urusan orang mukmin, semuanya baik baginya. Jika mendapat kelapangan ia bersyukur, maka itu baik baginya; jika ditimpa kesulitan ia bersabar, maka itu pun baik baginya.&rdquo; (HR. Muslim)</blockquote>
@@ -1368,7 +1416,7 @@
             <p class="taus-renung"><strong>Untuk direnungkan:</strong> Nikmat apa yang belum kita syukuri hari ini, dan ujian apa yang sedang melatih kesabaran kita?</p>
             <p class="taus-ref">Bacaan lanjutan: <a href="https://suaramuhammadiyah.id/read/cahaya-iman-dalam-syukur-dan-sabar" target="_blank" rel="noopener noreferrer">Cahaya Iman dalam Syukur dan Sabar</a> &mdash; Suko Wahyudi, Suara Muhammadiyah, 15 Feb 2025.</p>
           </div>
-          <div class="taus-panel" id="tausPanel1">
+          <div class="taus-panel" id="tausPanel2">
             <h3>Ilmu yang Berkah Dimulai dari Adab</h3>
             <div class="by">Tema: Adab Menuntut Ilmu dalam Islam</div>
             <blockquote class="taus-dalil">&ldquo;Barang siapa menempuh suatu jalan untuk mencari ilmu, Allah mudahkan baginya jalan menuju surga.&rdquo; (HR. Muslim)</blockquote>
@@ -1380,7 +1428,7 @@
             <p class="taus-renung"><strong>Untuk direnungkan:</strong> Sudahkah ilmu yang kita dapat menjadikan kita lebih rendah hati dan lebih banyak berbuat baik?</p>
             <p class="taus-ref">Bacaan lanjutan: <a href="https://web.suaramuhammadiyah.id/2023/03/13/pentingnya-adab-menuntut-ilmu" target="_blank" rel="noopener noreferrer">Pentingnya Adab Menuntut Ilmu</a> &mdash; Tito Yuwono, Suara Muhammadiyah, 13 Mar 2023.</p>
           </div>
-          <div class="taus-panel" id="tausPanel2">
+          <div class="taus-panel" id="tausPanel3">
             <h3>Menyambung yang Dekat, Merawat yang Jauh</h3>
             <div class="by">Tema: Menjaga Silaturahmi di Tengah Kesibukan</div>
             <blockquote class="taus-dalil">&ldquo;Barang siapa ingin dilapangkan rezekinya dan dipanjangkan umurnya, hendaklah ia menyambung silaturahmi.&rdquo; (HR. Bukhari dan Muslim)</blockquote>
@@ -1392,7 +1440,7 @@
             <p class="taus-renung"><strong>Untuk direnungkan:</strong> Siapa kerabat atau tetangga yang sudah lama belum kita sapa? Mungkin hari ini waktunya.</p>
             <p class="taus-ref">Bacaan lanjutan: <a href="https://muhammadiyah.or.id/2026/04/silaturahmi-tatap-muka-rahasia-sehat-dan-umur-panjang/" target="_blank" rel="noopener noreferrer">Silaturahmi Tatap Muka, Rahasia Sehat dan Umur Panjang</a> &mdash; muhammadiyah.or.id, 1 Apr 2026.</p>
           </div>
-          <div class="taus-panel" id="tausPanel3">
+          <div class="taus-panel" id="tausPanel4">
             <h3>Sedikit Tapi Halal Lebih Menenteramkan</h3>
             <div class="by">Tema: Keberkahan Rezeki yang Halal</div>
             <blockquote class="taus-dalil">&ldquo;Sesungguhnya Allah itu baik dan tidak menerima kecuali yang baik.&rdquo; (HR. Muslim)</blockquote>
@@ -1404,7 +1452,7 @@
             <p class="taus-renung"><strong>Untuk direnungkan:</strong> Sudahkah penghasilan dan makanan keluarga kita bersih dari yang syubhat dan haram?</p>
             <p class="taus-ref">Bacaan lanjutan: <a href="https://suaramuhammadiyah.id/read/meraih-hidup-berkah-dengan-hidup-halal" target="_blank" rel="noopener noreferrer">Meraih Hidup Berkah dengan Hidup Halal</a> &mdash; M. Saifudin, Lc., Suara Muhammadiyah, 2 Okt 2026.</p>
           </div>
-          <div class="taus-panel" id="tausPanel4">
+          <div class="taus-panel" id="tausPanel5">
             <h3>Amal yang Kecil Menjadi Besar Karena Niat</h3>
             <div class="by">Tema: Ikhlas, Kunci Diterimanya Amal</div>
             <blockquote class="taus-dalil">&ldquo;Sesungguhnya setiap amal tergantung pada niatnya, dan setiap orang mendapatkan sesuai apa yang diniatkannya.&rdquo; (HR. Bukhari dan Muslim)</blockquote>
@@ -1422,30 +1470,36 @@
         <li>
           <button type="button" class="taus-item on" data-idx="0" aria-controls="tausPanel0">
             <span class="taus-num">01</span>
-            <span class="taus-item-t">Keutamaan Sabar dan Syukur</span>
+            <span class="taus-item-t">7 Alasan Bangga Menjadi Muslim</span>
           </button>
         </li>
         <li>
           <button type="button" class="taus-item" data-idx="1" aria-controls="tausPanel1">
             <span class="taus-num">02</span>
-            <span class="taus-item-t">Adab Menuntut Ilmu dalam Islam</span>
+            <span class="taus-item-t">Keutamaan Sabar dan Syukur</span>
           </button>
         </li>
         <li>
           <button type="button" class="taus-item" data-idx="2" aria-controls="tausPanel2">
             <span class="taus-num">03</span>
-            <span class="taus-item-t">Menjaga Silaturahmi di Tengah Kesibukan</span>
+            <span class="taus-item-t">Adab Menuntut Ilmu dalam Islam</span>
           </button>
         </li>
         <li>
           <button type="button" class="taus-item" data-idx="3" aria-controls="tausPanel3">
             <span class="taus-num">04</span>
-            <span class="taus-item-t">Keberkahan Rezeki yang Halal</span>
+            <span class="taus-item-t">Menjaga Silaturahmi di Tengah Kesibukan</span>
           </button>
         </li>
         <li>
           <button type="button" class="taus-item" data-idx="4" aria-controls="tausPanel4">
             <span class="taus-num">05</span>
+            <span class="taus-item-t">Keberkahan Rezeki yang Halal</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="taus-item" data-idx="5" aria-controls="tausPanel5">
+            <span class="taus-num">06</span>
             <span class="taus-item-t">Ikhlas, Kunci Diterimanya Amal</span>
           </button>
         </li>
